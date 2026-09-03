@@ -1,0 +1,129 @@
+/* --- CSS Reset/Basics --- */
+/* Simple reset to ensure consistent margins and padding across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Define a simple light blue, minimal vibrance palette */
+    background-color: #E0F7FA; /* Very light, bright cyan/blue */
+    color: #333333; /* Soft black for readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the footer is always at the bottom */
+}
+
+/* --- Header / Main Container --- */
+.profile-container {
+    flex: 1; /* Pushes footer down */
+    max-width: 800px;
+    margin: 40px auto; /* Centers the content */
+    padding: 20px;
+}
+
+#profile-header {
+    text-align: center; /* Center-aligns the photo, name, and bio */
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #00838F; /* A vibrant, deep blue for the main heading */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.lead {
+    font-weight: 600; /* Makes the summary bio slightly bold */
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+#profile-header p {
+    margin-bottom: 10px;
+    color: #555555; /* A softer gray for the secondary bio line */
+}
+
+/* --- Profile Picture Styling --- */
+.profile-pic {
+    width: 150px; /* Size for desktop */
+    height: 150px;
+    border-radius: 50%; /* Makes the photo circular */
+    object-fit: cover; /* Ensures the image is not distorted */
+    border: 5px solid #00ACC1; /* A medium vibrant blue border accent */
+    margin-top: 20px;
+}
+
+/* --- Interests Section --- */
+#interests {
+    background-color: #ffffff; /* Contrast white background for the list card */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for a modern, slightly 'card' look */
+    margin-bottom: 40px;
+}
+
+#interests h2 {
+    color: #00838F; /* Matching accent color for sub-headings */
+    margin-bottom: 20px;
+    text-align: center; /* Optionally center the interests title too */
+}
+
+#interests ul {
+    list-style-type: none; /* Removes standard bullets for a cleaner look */
+    display: flex;
+    flex-wrap: wrap; /* Allows list items to wrap into rows */
+    justify-content: center; /* Center the list items if they wrap */
+    gap: 15px; /* Spacing between the list items */
+}
+
+#interests li {
+    background-color: #E1F5FE; /* Lighter light-blue card effect */
+    color: #006064; /* Matching text color */
+    padding: 10px 20px;
+    border-radius: 30px; /* Fully rounded "pill" shape */
+    font-size: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: auto; /* Ensures footer sticks to the bottom */
+}
+
+/* --- Responsive Adjustments (Mobile) --- */
+@media (max-width: 600px) {
+    .profile-container {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .profile-pic {
+        width: 120px; /* Smaller photo for mobile */
+        height: 120px;
+    }
+
+    #interests {
+        padding: 20px;
+    }
+
+    #interests ul {
+        gap: 10px; /* Closer spacing on small screens */
+    }
+
+    #interests li {
+        font-size: 0.9rem;
+    }
+}
